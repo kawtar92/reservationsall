@@ -1,0 +1,100 @@
+<div class="container-fluid" style="margin-top: 5%;">
+	<div class="">
+<h1  style="margin-left:42%; border-bottom: 1px solid black;display:inline	">Statistiques</h1></p>
+		<section class="statistic statistic2">
+			<div class="container">
+				<div>
+					<a style="display: block;" href="./index.html?p=employe" class="col-md-6 col-lg-3">
+						<div style="background-color: black;" class="statistic__item statistic__item--green">
+							<h2 class="number">45</h2>
+							<span class="desc">employes</span>
+							<div class="icon">
+								<i class="zmdi zmdi-accounts"></i>
+							</div>
+						</div>
+					</a> <a style="display: block;" href="./index.html?p=departement" class="col-md-6 col-lg-3">
+
+						<div  style="background-color: black;" class="statistic__item statistic__item--orange">
+							<h2 class="number">20</h2>
+							<span class="desc">departements</span>
+							<div class="icon">
+								<i class="zmdi zmdi-group-work"></i>
+							</div>
+						</div>
+					</a> <a style="display: block;" href="./index.html?p=pointage" class="col-md-6 col-lg-3">
+						<div style="background-color: black;" class="statistic__item statistic__item--blue">
+							<h2 class="number">23</h2>
+							<span class="desc">projets</span>
+							<div class="icon">
+								<i class="zmdi zmdi-check"></i>
+							</div>
+						</div>
+					</a> <a style="display: block;" href="./index.html"  onclick="show('produit')" class="col-md-6 col-lg-3">
+						<div style="background-color: black; border-radius: 10px;" class="statistic__item statistic__item--red">
+							<h2 id="produit" class="number">0</h2>
+							<span  class="desc">produits</span>
+							<div class="icon">
+								<i class="zmdi zmdi-settings"></i>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div  class="card-body container-fluid">
+				
+		            <div class="row">
+		                <div class="col-sm-6 mb-2">
+		                    <canvas id="myChart" width="100" height="100"></canvas>
+		                </div>
+		                <div style="position:relative ; bottom: 800px;"col-sm-6 mb-2>
+		                  
+		                    <canvas id="chart" width="500" height="500"></canvas>
+						
+		                </div>
+					</div>
+				
+		            
+	            </div>
+			</div>
+		</section>
+	</div>
+</div>
+<script src="script/statistiques.js" type="text/javascript"></script>
+<script>
+var ctx = document.getElementById('chart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [4, 6, 8, 10, 12, 14],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+				'rgba(0, 0, 0, 1)',
+				'rgba(0, 0, 0, 1)',
+				'rgba(0, 0, 0, 1)',
+				'rgba(0, 0, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Title Page-->
+        <title>RESERVATION - Login</title>
+
+        <!-- Main CSS-->
+        <link href="style/login.css" rel="stylesheet" media="all">
+
+    </head>
+
+    <body class="animsition">
+        <div class="wrapper">
+            <div class="container">
+                <h1>RESERVATION DE SALLES </h1>
+                
+                <form class="form" action="/login" method="POST" id="checkLogin">
+                    
+                    <input type="text" placeholder="Email" id="username" name="username" >
+                    <input type="password" placeholder="Password" id="password" name="password">
+                    
+                    <a style="display: block; position:relative; left:145px" href="./forget.html"><font color="white">Mot de passe oublier ?</font></a>
+                    <button id="connect" name="btn_submit" type="submit"  style="width:430px">Login</button>
+                </form>
+            </div>
+            
+            <ul class="bg-bubbles">
+                <li> </li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+<!-- <!--                               <?php -->
+<!--                                 if(isset($_GET['error'])){ -->
+<!--                                     if($_GET['error']=="invalid") -->
+<!--                                         echo '<div class="alert alert-danger" role="alert"> Email ou mot de passe incorrect !</div>'; -->
+<!--                                     if($_GET['error']=="vide") -->
+<!--                                         echo '<div class="alert alert-danger" role="alert">Veuillez remplir les champs</div>'; -->
+<!--                                 }if(isset($_GET['success'])){ -->
+<!--                                     if($_GET['success']=="verifyok") -->
+<!--                                         echo '<div class="alert alert-success" role="alert">Votre mot de passe à été changé avec succès</div>'; -->
+<!--                                 } -->
+<!--                                ?> -->
+                               
+
+        </div>
+
+        <script> $("#login-button").click(function(event){
+            event.preventDefault();
+        
+        $('form').fadeOut(500);
+        $('.wrapper').addClass('form-success');
+        });</script>
+    </body>
+
+</html>

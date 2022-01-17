@@ -29,21 +29,7 @@ public class SalleController {
 
 	@Autowired
 	private UserRepository userRepository;
-	@GetMapping(value = "/count")
 	
-	public long count() {
-	
-		User u1=new User();
-		User u2=new User();
-		u1.setUsername("admin");
-		u1.setPassword("admin");
-		u2.setUsername("user");
-		u2.setPassword("user");
-		userRepository.save(u1);
-		userRepository.save(u2);
-		return salleRepository.count();
-
-	}
 	@PostMapping("/save")
 	public void save(@RequestBody Salle salle){
 		System.out.println(salle);
